@@ -22,7 +22,7 @@ function onFormSubmit(e) {
 
   let delayValue = form.delay.value;
 
-  for (let i = 1; i < form.amount.value; i++) {
+  for (let i = 1; i <= form.amount.value; i++) {
     delayValue += form.step.value;
      createPromise(i, delayValue)
       .then(({ position, delay }) => {

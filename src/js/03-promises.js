@@ -23,6 +23,7 @@ function onFormSubmit(e) {
   let delayValue = form.delay.value;
 
   for (let i = 0; i < form.amount.value; i++) {
+    delayValue += form.step.value;
      createPromise(i, delayValue)
       .then(({ position, delay }) => {
         Notify.success(
@@ -34,5 +35,5 @@ function onFormSubmit(e) {
       });
     
   }
-  delayValue += form.step.value;
+  
 }

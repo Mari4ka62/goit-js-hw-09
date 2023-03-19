@@ -20,7 +20,7 @@ function createPromise(position, delay) {
 function onFormSubmit(e) {
   e.preventDefault();
 
-  let delayValue = form.delay.value;
+  let delayValue = Number(form.delay.value);
 
   for (let i = 1; i <= form.amount.value; i++) {
     
@@ -33,7 +33,7 @@ function onFormSubmit(e) {
         Notify.failure(
           `❌ Rejected promise ${position} in ${delay}ms`,);
       }); 
-delayValue += form.step.value;
+delayValue += Number(form.step.value);
   }
   
 }

@@ -20,7 +20,7 @@ function createPromise(position, delay) {
 function onFormSubmit(e) {
   e.preventDefault();
 
-  let delayValue = Number(form.delay.value);
+  let delayValue = form.delay.value;
 
   for (let i = 0; i < form.amount.value; i++) {
      createPromise(i, delayValue)
@@ -34,5 +34,5 @@ function onFormSubmit(e) {
       });
     
   }
-  delayValue+=Number(form.setPointerCapture.value)
+  delayValue += form.step.value;
 }
